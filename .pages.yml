@@ -1,3 +1,4 @@
+siteUrl: 'http://localhost:4321'
 media:
   input: public
   output: /
@@ -6,6 +7,7 @@ content:
     label: Posts
     type: collection
     path: src/content/blog
+    previewPath: /preview/posts   # → siteUrl + previewPath = preview iframe URL
     view:
       fields: [ title, draft, date ]
     fields:
@@ -24,6 +26,7 @@ content:
     label: About page
     type: file
     path: src/pages/about.md
+    previewPath: /preview/about   # → siteUrl + previewPath = preview iframe URL
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
       - { name: title, label: Title, type: string }
