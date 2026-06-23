@@ -1,24 +1,26 @@
 ---
-author: Sat Naing
-pubDatetime: 2023-01-30T15:57:52.737Z
+author: New author name
+pubDatetime: 2026-06-23
+modDatetime: 2026-06-23
 title: AstroPaper 2.0
+ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 slug: astro-paper-2
 featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
+draft: false
 tags:
   - release
-description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+description: AstroPaper with the enhancements of Astro v2. Type-safe markdown
+  contents, bug fixes and better dev experience etc.
 ---
-
 Astro 2.0 has been released with some cool features, breaking changes, DX improvements, better error overlay and so on. AstroPaper takes advantage of those cool features, especially Content Collections API.
 
-<!-- ![Introducing AstroPaper 2.0](https://user-images.githubusercontent.com/53733092/215683840-dc2502f5-8c5a-44f0-a26c-4e7180455056.png) -->
+
 
 ![Introducing AstroPaper 2.0](https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png)
 
 ## Table of contents
 
-## Features & Changes
+## Features &amp; Changes
 
 ### Type-safe Frontmatters and Redefined Blog Schema
 
@@ -43,16 +45,18 @@ Contents are now fetched with `getCollection` function. No relative path to the 
 
 ### Modified Search Logic for better Search Result
 
-In the older version of AstroPaper, when someone search some article, the search criteria keys that will be searched are `title`, `description` and `headings` (heading means all the headings h1 ~ h6 of the blog post). In AstroPaper v2, only `title` and `description` will be searched as the user types.
+In the older version of AstroPaper, when someone search some article, the search criteria keys that will be searched are `title`, `description` and `headings` (heading means all the headings h1 \~ h6 of the blog post). In AstroPaper v2, only `title` and `description` will be searched as the user types.
 
 ### Renamed Frontmatter Properties
 
 The following frontmatter properties are renamed.
 
-| Old Names | New Names   |
+
+| Old Names | New Names |
 | --------- | ----------- |
-| datetime  | pubDatetime |
-| slug      | postSlug    |
+| datetime | pubDatetime |
+| slug | postSlug |
+
 
 ### Default Tag for blog post
 
@@ -71,7 +75,7 @@ export const blogSchema = z.object({
 
 ### New Predefined Dark Color Scheme
 
-AstroPaper v2 has a new dark color scheme (high contrast & low contrast) which is based on Astro's dark logo. Check out [this link](https://astro-paper.pages.dev/posts/predefined-color-schemes#astro-dark) for more info.
+AstroPaper v2 has a new dark color scheme (high contrast &amp; low contrast) which is based on Astro's dark logo. Check out [this link](https://astro-paper.pages.dev/posts/predefined-color-schemes#astro-dark) for more info.
 
 ![New Predefined Dark Color Scheme](https://user-images.githubusercontent.com/53733092/215680520-59427bb0-f4cb-48c0-bccc-f182a428d72d.svg)
 
@@ -79,7 +83,7 @@ AstroPaper v2 has a new dark color scheme (high contrast & low contrast) which i
 
 AstroPaper 2.0 includes automatic class sorting with [TailwindCSS Prettier plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
 
-### Updated Docs & README
+### Updated Docs &amp; README
 
 All the [#docs](https://astro-paper.pages.dev/tags/docs/) blog posts and [README](https://github.com/satnaing/astro-paper#readme) are updated for this AstroPaper v2.
 
@@ -89,3 +93,4 @@ All the [#docs](https://astro-paper.pages.dev/tags/docs/) blog posts and [README
 - in a tag page, the last part of the breadcrumb is now updated to lower-case for consistency
 - exclude draft posts in a tag page
 - fix 'onChange value not updating issue' after a page reload
+
