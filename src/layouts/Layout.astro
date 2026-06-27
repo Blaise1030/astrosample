@@ -14,6 +14,11 @@ export interface Props {
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  pagescms?: {
+    name: string;
+    type: "collection" | "file";
+    path?: string;
+  };
 }
 
 const {
@@ -25,6 +30,7 @@ const {
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  pagescms,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -44,6 +50,18 @@ const socialImageURL = new URL(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+
+    {
+      pagescms && (
+        <>
+          <meta name="pagescms:name" content={pagescms.name} />
+          <meta name="pagescms:type" content={pagescms.type} />
+          {pagescms.path && (
+            <meta name="pagescms:path" content={pagescms.path} />
+          )}
+        </>
+      )
+    }
 
     <!-- General Meta Tags -->
     <title>{title}</title>
@@ -111,5 +129,11 @@ const socialImageURL = new URL(
   </head>
   <body>
     <slot />
+    <script
+      src="https://pagescms.nocodemonkeys1.workers.dev/pagescms-widget.js"
+      data-pagescms-origin="https://pagescms.nocodemonkeys1.workers.dev"
+      data-pagescms-owner="Blaise1030"
+      data-pagescms-repo="astrosample"
+      data-pagescms-branch="main"></script>
   </body>
 </html>
